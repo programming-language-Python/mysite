@@ -1,23 +1,23 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Добавление новости :: {{ block.super }}
+    Добавление новости :: {{ block.super }}
 {% endblock %}
 
 {% block sidebar %}
-{% include 'inc/_sidebar.html' %}
+    {% include 'inc/_sidebar.html' %}
 {% endblock %}
 
 {% block content %}
 
-<h1>Добавление новости</h1>
+    <h1>Добавление новости</h1>
 
-<form action="{% url 'add_news' %}" method="post">
-    {% csrf_token %}
+    <form action="{% url 'add_news' %}" method="post">
+        {% csrf_token %}
 
-    {{ form.as_p }}
+        {{ form.as_p }}
 
-    {% comment %}
+        {% comment %}
     {{ form.non_field.errors }}
     <div class="form-group">
         <label for="{{ form.title.id_for_label }}">Название: </label>
@@ -52,7 +52,7 @@
     </div>
     {% endcomment %}
 
-    {% comment %}
+        {% comment %}
     {% for field in form %}
     <div class="form-group">
         {{ field.label_tag }}
@@ -64,7 +64,7 @@
     {% endfor %}
     {% endcomment %}
 
-    <button type="submit" class="btn btn-primary btn-block">Добавить новость</button>
-</form>
+        <button type="submit" class="btn btn-primary btn-block">Добавить новость</button>
+    </form>
 
 {% endblock %}
