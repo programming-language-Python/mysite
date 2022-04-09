@@ -141,4 +141,3 @@ cython_debug/
 db.sqlite3
 .idea
 commands
-static
