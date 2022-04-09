@@ -16,6 +16,7 @@ gunicorn = "*"
 whitenoise = "*"
 psycopg2 = "*"
 django-simple-pwa = "*"
+python-decouple = "*"
 
 [dev-packages]
 
